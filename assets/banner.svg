@@ -25,28 +25,30 @@
   <!-- terminal prompt row -->
   <text x="56" y="152" font-family="'JetBrains Mono','Fira Code',Consolas,monospace" font-size="20" fill="#3EB8AE">$</text>
 
-  <g font-family="'JetBrains Mono','Fira Code',Consolas,monospace" font-size="20" fill="#D9A253">
-    <text x="80" y="152" opacity="0">
-      Cybersecurity Engineer
-      <animate attributeName="opacity" dur="12s" repeatCount="indefinite"
-        keyTimes="0;0.025;0.225;0.25;1" values="1;1;0;0;0"/>
-    </text>
-    <text x="80" y="152" opacity="0">
-      Data Scientist
-      <animate attributeName="opacity" dur="12s" repeatCount="indefinite"
-        keyTimes="0;0.25;0.275;0.475;0.5;1" values="0;0;1;1;0;0"/>
-    </text>
-    <text x="80" y="152" opacity="0">
-      AI &amp; Security Researcher
-      <animate attributeName="opacity" dur="12s" repeatCount="indefinite"
-        keyTimes="0;0.5;0.525;0.725;0.75;1" values="0;0;1;1;0;0"/>
-    </text>
-    <text x="80" y="152" opacity="0">
-      AI &amp; Security Researcher
-      <animate attributeName="opacity" dur="12s" repeatCount="indefinite"
-        keyTimes="0;0.75;0.775;0.975;1" values="0;0;1;1;0"/>
-    </text>
-  </g>
+<g font-family="'JetBrains Mono','Fira Code',Consolas,monospace" font-size="20" fill="#D9A253">
+
+  <text x="80" y="152" opacity="0">
+    Cybersecurity Engineer
+    <animate attributeName="opacity" dur="9s" repeatCount="indefinite"
+      keyTimes="0;0.025;0.308;0.333;1"
+      values="1;1;0;0;0"/>
+  </text>
+
+  <text x="80" y="152" opacity="0">
+    Data Scientist
+    <animate attributeName="opacity" dur="9s" repeatCount="indefinite"
+      keyTimes="0;0.333;0.358;0.641;0.666;1"
+      values="0;0;1;1;0;0"/>
+  </text>
+
+  <text x="80" y="152" opacity="0">
+    AI &amp; Security Researcher
+    <animate attributeName="opacity" dur="9s" repeatCount="indefinite"
+      keyTimes="0;0.666;0.691;0.975;1"
+      values="0;0;1;1;0"/>
+  </text>
+
+</g>
 
   <rect x="470" y="136" width="10" height="20" fill="#D9A253">
     <animate attributeName="opacity" dur="1s" values="1;1;0;0;1" keyTimes="0;0.45;0.5;0.95;1" repeatCount="indefinite"/>
