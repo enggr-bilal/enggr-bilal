@@ -461,7 +461,19 @@ to insider-threat detection using the **CERT r4.2** dataset.
 </td>
 </tr>
 </table>
+<br>
 
+<div align="center">
+
+<img
+  src="./assets/cyber-defense-console.svg"
+  alt="Cyber Defense Console — Muhammad Bilal"
+  width="100%"
+/>
+
+</div>
+
+<br>
 <img src="./assets/divider.svg" width="100%"/>
 
 <div align="center">
