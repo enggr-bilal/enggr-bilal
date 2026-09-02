@@ -1,0 +1,679 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="1000"
+  height="360"
+  viewBox="0 0 1000 360"
+  role="img"
+  aria-labelledby="title desc"
+>
+  <title id="title">Cyber Defense Console — Muhammad Bilal</title>
+  <desc id="desc">
+    Animated cybersecurity console showing AA, EA and BA anomaly signals,
+    behavioral analysis and threat monitoring.
+  </desc>
+
+  <defs>
+
+    <!-- Background -->
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B10"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+
+    <!-- Panels -->
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#101720"/>
+      <stop offset="100%" stop-color="#151F2B"/>
+    </linearGradient>
+
+    <!-- Signal -->
+    <linearGradient id="signal" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3EB8AE" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#3EB8AE"/>
+      <stop offset="100%" stop-color="#D9A253" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Scan -->
+    <linearGradient id="scan" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3EB8AE" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#3EB8AE" stop-opacity=".8"/>
+      <stop offset="100%" stop-color="#3EB8AE" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Glow -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Small glow -->
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Grid -->
+    <pattern
+      id="grid"
+      width="32"
+      height="32"
+      patternUnits="userSpaceOnUse"
+    >
+      <path
+        d="M32 0H0V32"
+        fill="none"
+        stroke="#64748B"
+        stroke-opacity=".08"
+      />
+    </pattern>
+
+  </defs>
+
+
+  <!-- ========================================================= -->
+  <!-- BACKGROUND -->
+  <!-- ========================================================= -->
+
+  <rect
+    x="0"
+    y="0"
+    width="1000"
+    height="360"
+    rx="18"
+    fill="url(#background)"
+  />
+
+  <rect
+    x="0"
+    y="0"
+    width="1000"
+    height="360"
+    rx="18"
+    fill="url(#grid)"
+  />
+
+  <!-- Outer border -->
+  <rect
+    x="1"
+    y="1"
+    width="998"
+    height="358"
+    rx="17"
+    fill="none"
+    stroke="#334155"
+    stroke-opacity=".65"
+  />
+
+
+  <!-- ========================================================= -->
+  <!-- HEADER -->
+  <!-- ========================================================= -->
+
+  <text
+    x="34"
+    y="38"
+    fill="#3EB8AE"
+    font-family="monospace"
+    font-size="13"
+    font-weight="700"
+  >
+    CYBER DEFENSE CONSOLE
+  </text>
+
+  <!-- Online indicator -->
+  <circle
+    cx="246"
+    cy="33"
+    r="5"
+    fill="#3EB8AE"
+    filter="url(#glow)"
+  >
+    <animate
+      attributeName="opacity"
+      values="1;.35;1"
+      dur="1.4s"
+      repeatCount="indefinite"
+    />
+  </circle>
+
+  <text
+    x="260"
+    y="38"
+    fill="#8B96A5"
+    font-family="monospace"
+    font-size="12"
+  >
+    SYSTEM ONLINE
+  </text>
+
+  <text
+    x="824"
+    y="38"
+    fill="#64748B"
+    font-family="monospace"
+    font-size="11"
+  >
+    SEC-LAB / 01
+  </text>
+
+
+  <!-- ========================================================= -->
+  <!-- TERMINAL AREA -->
+  <!-- ========================================================= -->
+
+  <rect
+    x="30"
+    y="58"
+    width="940"
+    height="78"
+    rx="10"
+    fill="#080C11"
+    stroke="#263342"
+  />
+
+  <text
+    x="48"
+    y="84"
+    fill="#64748B"
+    font-family="monospace"
+    font-size="12"
+  >
+    &gt; initializing security telemetry...
+  </text>
+
+  <text
+    x="48"
+    y="105"
+    fill="#8B96A5"
+    font-family="monospace"
+    font-size="12"
+  >
+    &gt; correlating attention / emotion / behavior signals...
+  </text>
+
+  <text
+    x="48"
+    y="126"
+    fill="#3EB8AE"
+    font-family="monospace"
+    font-size="12"
+  >
+    &gt; threat analysis engine ready
+  </text>
+
+  <!-- blinking cursor -->
+  <rect
+    x="272"
+    y="116"
+    width="7"
+    height="12"
+    fill="#3EB8AE"
+  >
+    <animate
+      attributeName="opacity"
+      values="1;0;1"
+      dur="1s"
+      repeatCount="indefinite"
+    />
+  </rect>
+
+
+  <!-- ========================================================= -->
+  <!-- SIGNAL PANELS -->
+  <!-- ========================================================= -->
+
+  <!-- AA -->
+  <rect
+    x="30"
+    y="158"
+    width="285"
+    height="118"
+    rx="12"
+    fill="url(#panel)"
+    stroke="#3EB8AE"
+    stroke-opacity=".45"
+  />
+
+  <text
+    x="50"
+    y="185"
+    fill="#3EB8AE"
+    font-family="Arial,sans-serif"
+    font-size="18"
+    font-weight="700"
+  >
+    AA
+  </text>
+
+  <text
+    x="50"
+    y="204"
+    fill="#64748B"
+    font-family="monospace"
+    font-size="10"
+  >
+    ATTENTION ANOMALY
+  </text>
+
+  <!-- AA bar -->
+  <rect
+    x="50"
+    y="223"
+    width="230"
+    height="8"
+    rx="4"
+    fill="#263342"
+  />
+
+  <rect
+    x="50"
+    y="223"
+    width="190"
+    height="8"
+    rx="4"
+    fill="#3EB8AE"
+  >
+    <animate
+      attributeName="width"
+      values="150;205;175;190"
+      dur="3.2s"
+      repeatCount="indefinite"
+    />
+  </rect>
+
+  <text
+    x="50"
+    y="251"
+    fill="#8B96A5"
+    font-family="monospace"
+    font-size="11"
+  >
+    signal:
+  </text>
+
+  <text
+    x="105"
+    y="251"
+    fill="#F8FAFC"
+    font-family="monospace"
+    font-size="11"
+  >
+    TEXT / EMAIL / HTTP
+  </text>
+
+  <circle
+    cx="270"
+    cy="253"
+    r="4"
+    fill="#3EB8AE"
+    filter="url(#softGlow)"
+  >
+    <animate
+      attributeName="opacity"
+      values="1;.25;1"
+      dur="1.8s"
+      repeatCount="indefinite"
+    />
+  </circle>
+
+
+  <!-- EA -->
+  <rect
+    x="357"
+    y="158"
+    width="285"
+    height="118"
+    rx="12"
+    fill="url(#panel)"
+    stroke="#D9A253"
+    stroke-opacity=".45"
+  />
+
+  <text
+    x="377"
+    y="185"
+    fill="#D9A253"
+    font-family="Arial,sans-serif"
+    font-size="18"
+    font-weight="700"
+  >
+    EA
+  </text>
+
+  <text
+    x="377"
+    y="204"
+    fill="#64748B"
+    font-family="monospace"
+    font-size="10"
+  >
+    EMOTION ANOMALY
+  </text>
+
+  <rect
+    x="377"
+    y="223"
+    width="230"
+    height="8"
+    rx="4"
+    fill="#263342"
+  />
+
+  <rect
+    x="377"
+    y="223"
+    width="160"
+    height="8"
+    rx="4"
+    fill="#D9A253"
+  >
+    <animate
+      attributeName="width"
+      values="130;185;150;160"
+      dur="3.7s"
+      repeatCount="indefinite"
+    />
+  </rect>
+
+  <text
+    x="377"
+    y="251"
+    fill="#8B96A5"
+    font-family="monospace"
+    font-size="11"
+  >
+    signal:
+  </text>
+
+  <text
+    x="432"
+    y="251"
+    fill="#F8FAFC"
+    font-family="monospace"
+    font-size="11"
+  >
+    NLP / SENTIMENT
+  </text>
+
+  <circle
+    cx="597"
+    cy="253"
+    r="4"
+    fill="#D9A253"
+    filter="url(#softGlow)"
+  >
+    <animate
+      attributeName="opacity"
+      values=".25;1;.25"
+      dur="2.1s"
+      repeatCount="indefinite"
+    />
+  </circle>
+
+
+  <!-- BA -->
+  <rect
+    x="685"
+    y="158"
+    width="285"
+    height="118"
+    rx="12"
+    fill="url(#panel)"
+    stroke="#3EB8AE"
+    stroke-opacity=".45"
+  />
+
+  <text
+    x="705"
+    y="185"
+    fill="#3EB8AE"
+    font-family="Arial,sans-serif"
+    font-size="18"
+    font-weight="700"
+  >
+    BA
+  </text>
+
+  <text
+    x="705"
+    y="204"
+    fill="#64748B"
+    font-family="monospace"
+    font-size="10"
+  >
+    BEHAVIOR ANOMALY
+  </text>
+
+  <rect
+    x="705"
+    y="223"
+    width="230"
+    height="8"
+    rx="4"
+    fill="#263342"
+  />
+
+  <rect
+    x="705"
+    y="223"
+    width="205"
+    height="8"
+    rx="4"
+    fill="#3EB8AE"
+  >
+    <animate
+      attributeName="width"
+      values="175;220;190;205"
+      dur="2.9s"
+      repeatCount="indefinite"
+    />
+  </rect>
+
+  <text
+    x="705"
+    y="251"
+    fill="#8B96A5"
+    font-family="monospace"
+    font-size="11"
+  >
+    signal:
+  </text>
+
+  <text
+    x="760"
+    y="251"
+    fill="#F8FAFC"
+    font-family="monospace"
+    font-size="11"
+  >
+    LOGON / FILE / DEVICE
+  </text>
+
+  <circle
+    cx="925"
+    cy="253"
+    r="4"
+    fill="#3EB8AE"
+    filter="url(#softGlow)"
+  >
+    <animate
+      attributeName="opacity"
+      values="1;.2;1"
+      dur="1.6s"
+      repeatCount="indefinite"
+    />
+  </circle>
+
+
+  <!-- ========================================================= -->
+  <!-- CONNECTION / DATA FLOW -->
+  <!-- ========================================================= -->
+
+  <path
+    d="M315 217H357"
+    fill="none"
+    stroke="#3EB8AE"
+    stroke-width="2"
+    opacity=".55"
+  />
+
+  <path
+    d="M642 217H685"
+    fill="none"
+    stroke="#3EB8AE"
+    stroke-width="2"
+    opacity=".55"
+  />
+
+  <!-- Moving packets -->
+  <circle r="4" fill="#D9A253" filter="url(#glow)">
+    <animateMotion
+      path="M315 217H357"
+      dur="1.4s"
+      repeatCount="indefinite"
+    />
+  </circle>
+
+  <circle r="4" fill="#D9A253" filter="url(#glow)">
+    <animateMotion
+      path="M642 217H685"
+      dur="1.4s"
+      begin=".5s"
+      repeatCount="indefinite"
+    />
+  </circle>
+
+
+  <!-- ========================================================= -->
+  <!-- STATUS BAR -->
+  <!-- ========================================================= -->
+
+  <rect
+    x="30"
+    y="294"
+    width="940"
+    height="42"
+    rx="10"
+    fill="#080C11"
+    stroke="#263342"
+  />
+
+  <text
+    x="50"
+    y="320"
+    fill="#64748B"
+    font-family="monospace"
+    font-size="11"
+  >
+    THREAT LEVEL
+  </text>
+
+  <text
+    x="145"
+    y="320"
+    fill="#3EB8AE"
+    font-family="monospace"
+    font-size="11"
+    font-weight="700"
+  >
+    MONITORING
+  </text>
+
+  <!-- separator -->
+  <line
+    x1="250"
+    y1="305"
+    x2="250"
+    y2="327"
+    stroke="#334155"
+  />
+
+  <text
+    x="270"
+    y="320"
+    fill="#64748B"
+    font-family="monospace"
+    font-size="11"
+  >
+    CORRELATION
+  </text>
+
+  <text
+    x="355"
+    y="320"
+    fill="#D9A253"
+    font-family="monospace"
+    font-size="11"
+    font-weight="700"
+  >
+    ACTIVE
+  </text>
+
+  <line
+    x1="430"
+    y1="305"
+    x2="430"
+    y2="327"
+    stroke="#334155"
+  />
+
+  <text
+    x="450"
+    y="320"
+    fill="#64748B"
+    font-family="monospace"
+    font-size="11"
+  >
+    ENGINE
+  </text>
+
+  <text
+    x="510"
+    y="320"
+    fill="#F8FAFC"
+    font-family="monospace"
+    font-size="11"
+  >
+    LAAEB LAB
+  </text>
+
+  <!-- System secure -->
+  <text
+    x="835"
+    y="320"
+    fill="#3EB8AE"
+    font-family="monospace"
+    font-size="11"
+    font-weight="700"
+  >
+    ● SYSTEM SECURE
+  </text>
+
+  <!-- ========================================================= -->
+  <!-- SCANNING LINE -->
+  <!-- ========================================================= -->
+
+  <rect
+    x="30"
+    y="58"
+    width="4"
+    height="278"
+    rx="2"
+    fill="url(#scan)"
+    opacity=".65"
+  >
+    <animate
+      attributeName="x"
+      values="30;970;30"
+      dur="7s"
+      repeatCount="indefinite"
+    />
+  </rect>
+
+</svg>
