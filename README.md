@@ -75,23 +75,29 @@ My current research focuses on reproducing and extending **LaAeb**, a multi-sign
 The system investigates multiple dimensions of employee activity rather than relying on a single security event.
 
 ```text
-                         CERT r4.2
-                             │
-          ┌──────────────────┼──────────────────┐
-          │                  │                  │
-          ▼                  ▼                  ▼
-   Attention Anomaly   Emotion Anomaly   Behavior Anomaly
-          │                  │                  │
-          │                  │                  │
-          └──────────────────┼──────────────────┘
-                             │
-                             ▼
-                     Multi-Signal Risk
-                             │
-                ┌────────────┴────────────┐
-                ▼                         ▼
-         Employee-level             Department-level
-             analysis                  analysis
+                           CERT r4.2 Benchmark Logs
+             (email.csv, http.csv, file.csv, logon.csv, device.csv)
+                                        │
+           ┌────────────────────────────┼────────────────────────────┐
+           ▼                            ▼                            ▼
+   Attention Anomaly (AA)      Emotion Anomaly (EA)        Behavior Anomaly (BA)
+   • Topic drift (GloVe)       • Sentiment shift (HowNet)  • Off-hours activity
+   • Access frequency spikes   • Psycholinguistic drift    • Unauthorized USB logon
+   • GAA-email / GAA-http      • Negative emotion spikes   • Workstation session drift
+           │                            │                            │
+           └────────────────────────────┼────────────────────────────┘
+                                        │
+                                        ▼
+                         Multivariate Feature Alignment
+                                        │
+                                        ▼
+                         Unsupervised Fusion Engine
+                    [ Isolation Forest | OCSVM | Ensembles ]
+                                        │
+                    ┌───────────────────┴───────────────────┐
+                    ▼                                       ▼
+       Explainable AI (SHAP)                     Prioritized SOC Queue
+    (Feature attribution per alert)           (Top-k User-Day Alert Ranking)
 ```
 
 ### Detection channels
@@ -450,13 +456,15 @@ incident response, and infrastructure security.
 
 <td width="50%" valign="top">
 
-### 🧠 LaAeb — Insider Threat Detection
+### 🧠 [LaAeb — Insider Threat Detection](https://github.com/enggr-bilal/LaAeb-Insider-Threat-Detection)
 
 Master's research applying:
 
 `Machine Learning` · `NLP` · `Anomaly Detection` · `Behavioral Analytics`
 
 to insider-threat detection using the **CERT r4.2** dataset.
+
+**[View Repository →](https://github.com/enggr-bilal/LaAeb-Insider-Threat-Detection)**
 
 </td>
 </tr>
